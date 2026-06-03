@@ -1,4 +1,4 @@
-package com.corejava.override.exception;
+package com.corejava.exception;
 
 public class TestExceptionOrder {
 
@@ -12,10 +12,13 @@ public class TestExceptionOrder {
 			// Throwing ClassCastException
 			Object x = 0;
 			System.out.println((String) x);
-			
+
+			// catch specific exceptions first followed by generic Exception
 		} catch (NullPointerException e) {
+			// RuntimeException
 			System.out.println("Caught NullPointerException");
 		} catch (ClassCastException e) {
+			// RuntimeException
 			System.out.println("Caught ClassCastException");
 		} catch (Exception e) {
 			System.out.println("Caught Exception");

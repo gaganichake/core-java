@@ -16,11 +16,11 @@ public class Sorted {
 
 		List<String> names = Arrays.asList("Reflection","Collection","Stream");
 		
-		List<String> result = names.stream().sorted().collect(Collectors.toList());
+		List<String> result = names.stream().sorted().toList();
 		
 		result.forEach(System.out::println);
 
-		List<String> reverseResult = names.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList());
+		List<String> reverseResult = names.stream().sorted(Collections.reverseOrder()).toList();
 
 		reverseResult.forEach(System.out::println);
 	}

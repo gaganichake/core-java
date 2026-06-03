@@ -18,15 +18,19 @@ import java.util.List;
 public class MethodReferences {
 
 	public static void main(String[] args) {
-		
-		List<String> list = Arrays.asList("Tom", "John");
-		
-		list.forEach(n -> System.out.println(n));
-		
-		list.forEach(System.out::println); // Using method reference Equivalent to the above
-		
-		// Another example
-		list.sort((String::compareTo));
+
+		List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+
+		names.stream()
+				.filter(name -> name.startsWith("A"))  // Lambda for filtering
+				.map(name -> name.toUpperCase())       // Lambda for transformation
+				.forEach(name -> System.out.println(name)); // Terminal openration
+
+		// Instead of a lambda like (x) -> x.toString(), you can use a method reference:
+		names.stream()
+				.filter(name -> name.startsWith("A"))  // Lambda for filtering
+				.map(String::toUpperCase)       // Instance method reference as shorthand
+				.forEach(System.out::println);         // Static Method reference as shorthand
 	}
 
 }

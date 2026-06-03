@@ -1,6 +1,6 @@
 package com.corejava.markerinterface;
 
-public class Main {
+public class TestMarkerInterface {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		

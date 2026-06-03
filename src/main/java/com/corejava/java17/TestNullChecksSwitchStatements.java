@@ -1,6 +1,6 @@
 package com.corejava.java17;
 
-public class NullChecksSwitchStatements {
+public class TestNullChecksSwitchStatements {
 
     public static void main(String[] args){
 
@@ -24,7 +24,6 @@ public class NullChecksSwitchStatements {
         switch (s) {
 //            case null : System.out.println("Oops");
             case "Foo", "Bar" -> System.out.println("Great");
-            default           -> System.out.println("Ok");
         }
     }
 }

@@ -6,9 +6,8 @@ import java.util.random.RandomGeneratorFactory;
 public class TestRandomGeneratorFactory {
 
     public static void main(String[] args){
-        RandomGeneratorFactory factory = RandomGeneratorFactory.of("SecureRandom");
-        RandomGenerator random = factory.create(200L);
-
+        RandomGenerator random = RandomGeneratorFactory.of("SecureRandom")
+                .create(200L);
         //get random numbers
         random.nextDouble();
     }

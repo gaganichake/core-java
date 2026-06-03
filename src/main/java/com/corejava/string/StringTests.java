@@ -4,36 +4,48 @@ public class StringTests {
 
 	public static void main(String[] args) {
 
-		compareNew();
+		compareNewStrings();
 
-		compareTransitions();
+		compareStringTransitions();
 
-		compareAssingments();
+		compareStringAssingments();
 
 	}
 
-	private static void compareAssingments() {
+	private static void compareStringAssingments() {
+		System.out.println("\ncompareStringAssingments");
+
 		String x = "Java"; // Assign a value to x
 		String y = x; // Now y and x refer to the same String object
 		System.out.println("x string = " + x);
 		System.out.println("y string = " + y);
+		System.out.println("x == y ? " + (x == y));// try this  without parentheses
+		System.out.println("x.equals(y) = " + x.equals(y));
 
 		x = x + " Bean"; // Now modify the object using the x reference
 		System.out.println("x string = " + x);
 		System.out.println("y string = " + y);
+		System.out.println("x == y ? " + (x == y));
+		System.out.println("x.equals(y) = " + x.equals(y));
 	}
 
-	private static void compareTransitions() {
+	private static void compareStringTransitions() {
+		System.out.println("\ncompareStringTransitions");
+
 		String message = "HELLO WORLD";
 
 		String result = transition(message);
 
 		if(result == message){
-			System.out.println("1 == " + result);
+			System.out.println("message (" + message + ") and result (" + result + ") are same objects");
+		} else {
+			System.out.println("message (" + message +  ") and result (" + result + ") are different objects");
 		}
 
 		if(result.equals(message)){
-			System.out.println("2 == " + result);
+			System.out.println("message (" + message + ") and result (" + result + ") are same values");
+		} else {
+			System.out.println("message (" + message + ") and result (" + result + ") are different values");
 		}
 	}
 
@@ -41,7 +53,8 @@ public class StringTests {
 		return message.toLowerCase();
 	}
 
-	private static void compareNew() {
+	private static void compareNewStrings() {
+		System.out.println("\ncompareNewStrings");
 
 		String s1 = "abc";
 		String s2 = new String("abc");

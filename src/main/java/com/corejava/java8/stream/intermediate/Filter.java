@@ -15,7 +15,7 @@ public class Filter {
 		
 		List<String> names = Arrays.asList("Reflection","Collection","Stream");
 		
-		List<String> result = names.stream().filter(s->s.startsWith("S")).collect(Collectors.toList());
+		List<String> result = names.stream().filter(s->s.startsWith("S")).toList();
 
 		result.forEach(System.out::println);
 	}

@@ -1,4 +1,6 @@
-package com.corejava.concurrency;
+package com.corejava.concurrency.executorframework;
+
+import com.corejava.concurrency.Task;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -25,4 +27,3 @@ public class ExecutorExample {
 	}
 
 }
- 

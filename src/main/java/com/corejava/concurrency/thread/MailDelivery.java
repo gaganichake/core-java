@@ -1,4 +1,4 @@
-package com.corejava.concurrency.thread.threadexecutor;
+package com.corejava.concurrency.thread;
 
 import java.util.ArrayList;
 import java.util.List;
